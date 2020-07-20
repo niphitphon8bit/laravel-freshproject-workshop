@@ -1,17 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Post;
+
 
 class PostController extends Controller
 {
     public function show($pt_slug){
         
-        $post = \DB::table('posts')->where('pt_slug' , $pt_slug)->first();
-
-        if(!$post){
-            abort(404);
-        }
-
+        // $post = \DB::table('posts')->where('pt_slug' , $pt_slug)->first();
+       
+        // $post = Post::where('pt_slug',$pt_slug)->firstOrFail();
+        
         //  * dumb and die data
         // dd($post);
 
@@ -27,7 +27,7 @@ class PostController extends Controller
         // } // end if
     
         return view('post',[
-            'post' => $post
+            'post' => Post::where('pt_slug',$pt_slug)->firstOrFail()
             ]);
     }
 }
