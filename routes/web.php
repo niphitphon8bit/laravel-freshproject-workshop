@@ -94,3 +94,25 @@ Route::get('/post/{post}', function ($post) {
     * Last Edit : 07/10/2020 Nipitphon
 */
 Route::get('post2/{post}', 'PostController@show');
+
+/*
+    * get('/contact',function ()) 
+    * return contact page
+    * Create : 07/21/2020
+    * Author : Niphitphon
+    * Last Edit : 07/21/2020 Nipitphon
+*/
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+/*
+    * get('/element',function ()) 
+    * return elements page
+    * Create : 07/21/2020
+    * Author : Niphitphon
+    * Last Edit : 07/21/2020 Nipitphon
+*/
+Route::get('/element', function () {
+    return view('element');
+});
