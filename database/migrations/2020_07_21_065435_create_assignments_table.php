@@ -11,11 +11,21 @@ class CreateAssignmentsTable extends Migration
      *
      * @return void
      */
+    /*
+        * up 
+        * create table name assignments  
+        * Create : 07/21/2020
+        * Author : Niphitphon
+        * Last Edit : 07/21/2020 Nipitphon
+    */
     public function up()
     {
         Schema::create('assignments', function (Blueprint $table) {
             $table->id();
+            $table->text('body');
+            $table->boolean('completed');
             $table->timestamps();
+            $table->timestamp('due_date')->nullable();
         });
     }
 
