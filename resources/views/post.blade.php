@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>My name</h1>
-    <p>{{ $post->pt_body }}</p>
+    <p>{{ $post->body }}</p>
 </body>
 </html>
