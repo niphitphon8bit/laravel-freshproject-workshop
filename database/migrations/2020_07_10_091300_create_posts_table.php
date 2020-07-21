@@ -13,12 +13,12 @@ class CreatePostsTable extends Migration
      */
 
     /*
-    * up 
-    * create table name posts  
-    * Create : 07/21/2020
-    * Author : Niphitphon
-    * Last Edit : 07/21/2020 Nipitphon
-*/
+        * up 
+        * create table name posts  
+        * Create : 07/21/2020
+        * Author : Niphitphon
+        * Last Edit : 07/21/2020 Nipitphon
+    */
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
