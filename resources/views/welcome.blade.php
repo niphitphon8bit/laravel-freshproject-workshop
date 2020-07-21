@@ -1,24 +1,26 @@
 
 @extends ('layout');
 
-    @section('content');    
-        <!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Industrious</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+@section('header')
+    <!-- Header -->
+    <header id="header">
+        <a class="logo" href="index.html">Industrious</a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="/element">Elements</a></li>
-					<li><a href="generic.html">Generic</a></li>
-				</ul>
-			</nav>
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/element">Elements</a></li>
+            <li><a href="/generic">Generic</a></li>
+        </ul>
+    </nav>
+@endsection
 
+@section('content');    
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
