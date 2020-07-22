@@ -111,24 +111,15 @@ Route::get('/contact', function () {
 });
 
 /*
-    * get('/element',function ()) 
-    * return elements page
-    * Create : 07/21/2020
-    * Author : Niphitphon
-    * Last Edit : 07/21/2020 Nipitphon
+* get('/element',function ()) 
+* return elements page
+* Create : 07/21/2020
+* Author : Niphitphon
+* Last Edit : 07/21/2020 Nipitphon
 */
 Route::get('/element', function () {
     return view('element');
 });
-
-/*
-    * get('/article/{artivle}','ArticleController@show') 
-    * route to function show in Article Controller
-    * Create : 07/22/2020
-    * Author : Niphitphon
-    * Last Edit : 07/22/2020 Nipitphon
-*/
-Route::get('/article/{article}','ArticleController@show');
 
 /*
     * get('/article/','ArticleController@show') 
@@ -138,3 +129,32 @@ Route::get('/article/{article}','ArticleController@show');
     * Last Edit : 07/22/2020 Nipitphon
 */
 Route::get('/articles/','ArticleController@index');
+
+/*
+    * post('/article/','ArticleController@store') 
+    * route to function store in Article Controller
+    * Create : 07/22/2020
+    * Author : Niphitphon
+    * Last Edit : 07/22/2020 Nipitphon
+*/
+Route::post('/articles/','ArticleController@store');
+
+
+/*
+* get('/articles/create','ArticleController@create') 
+    * route to function create in Article Controller for create new article
+    * Create : 07/22/2020
+    * Author : Niphitphon
+    * Last Edit : 07/22/2020 Nipitphon
+*/
+Route::get('/article/create','ArticleController@create');
+
+
+/*
+    * get('/article/{artivle}','ArticleController@show') 
+    * route to function show in Article Controller
+    * Create : 07/22/2020
+    * Author : Niphitphon
+    * Last Edit : 07/22/2020 Nipitphon
+*/
+Route::get('/article/{article}','ArticleController@show');
