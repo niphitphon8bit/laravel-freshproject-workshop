@@ -10,9 +10,9 @@ class ArticleController extends Controller
 {
     /*
         * index 
-        * get index of article page
+        * render a list of a article
         * input : -
-        * output : completed column set to true (1)
+        * output : list of article to article.view file
         * Create : 07/22/2020
         * Author : Niphitphon
         * Last Edit : 07/22/2020 Nipitphon
@@ -26,7 +26,7 @@ class ArticleController extends Controller
 
     /*
         * show($id) 
-        * get article by id to show on page
+        * show a single article
         * input : id
         * output : article from database by id
         * Create : 07/22/2020
@@ -43,9 +43,9 @@ class ArticleController extends Controller
 
     /*
         * create() 
-        * create article
+        * show a view to create a new article
         * input : -
-        * output : create article to db
+        * output : create new article page
         * Create : 07/22/2020
         * Author : Niphitphon
         * Last Edit : 07/22/2020 Nipitphon
@@ -56,7 +56,7 @@ class ArticleController extends Controller
 
     /*
         * store() 
-        * -
+        * persist the new article
         * input : -
         * output : -
         * Create : 07/22/2020
@@ -69,7 +69,7 @@ class ArticleController extends Controller
 
     /*
         * edit()
-        * -
+        * show a view to edit an existing article
         * input : -
         * output : -
         * Create : 07/22/2020
@@ -82,7 +82,7 @@ class ArticleController extends Controller
 
     /*
         * update()
-        * -
+        * presist the edited article 
         * input : -
         * output : -
         * Create : 07/22/2020
@@ -95,7 +95,7 @@ class ArticleController extends Controller
 
     /*
         * destroy() 
-        * get -
+        * delete the article
         * input : -
         * output : -
         * Create : 07/22/2020
