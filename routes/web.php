@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
     * return welcome page
     * Create : 07/10/2020
     * Author : Niphitphon
-    * Last Edit : 07/21/2020 Nipitphon
+    * Last Edit : 07/22/2020 Nipitphon
 */
 
 Route::get('/', function () {
@@ -120,3 +120,21 @@ Route::get('/contact', function () {
 Route::get('/element', function () {
     return view('element');
 });
+
+/*
+    * get('/article/{artivle}','ArticleController@show') 
+    * route to function show in Article Controller
+    * Create : 07/22/2020
+    * Author : Niphitphon
+    * Last Edit : 07/22/2020 Nipitphon
+*/
+Route::get('/article/{article}','ArticleController@show');
+
+/*
+    * get('/article/','ArticleController@show') 
+    * route to function index in Article Controller
+    * Create : 07/22/2020
+    * Author : Niphitphon
+    * Last Edit : 07/22/2020 Nipitphon
+*/
+Route::get('/articles/','ArticleController@index');
