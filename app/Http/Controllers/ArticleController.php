@@ -18,7 +18,7 @@ class ArticleController extends Controller
         * Last Edit : 07/22/2020 Nipitphon
     */
     public function index(){
-        $articles = Article::all();
+        $articles = Article::latest()->get();
         return view('articles.index',[
             'articles' => $articles
         ]);
@@ -50,8 +50,8 @@ class ArticleController extends Controller
         * Author : Niphitphon
         * Last Edit : 07/22/2020 Nipitphon
     */
-    public function create(){
-
+    public function create(Request $request){
+        return view('articles.create');
     }
 
     /*
@@ -64,7 +64,12 @@ class ArticleController extends Controller
         * Last Edit : 07/22/2020 Nipitphon
     */
     public function store(){
-
+        $article = new Article();
+        $article->title = request('title');
+        $article->body = request('body');
+        $article->excerpt = request('excerpt');
+        $article->save();
+        return redirect('/articles');
     }
 
     /*
