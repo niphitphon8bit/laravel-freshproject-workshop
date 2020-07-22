@@ -49,7 +49,8 @@
                         <hr>
                         <p>{{ $article->body }}</p>
 					</div>
-				</div>
+                    <p>published at {{ date('d-m-y H:i:s',strtotime($article->created_at)) }}</p>
+                </div>
 			</section>
 
 		<!-- Footer -->
