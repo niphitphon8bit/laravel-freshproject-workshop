@@ -1,6 +1,4 @@
 
-	<body class="is-preload">
-
         @extends('layout')
 		@section('header')
     <!-- Header -->
@@ -501,4 +499,3 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
         @endsection
-	</body>
