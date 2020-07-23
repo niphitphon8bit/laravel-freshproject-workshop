@@ -81,8 +81,9 @@ class ArticleController extends Controller
         * Author : Niphitphon
         * Last Edit : 07/22/2020 Nipitphon
     */
-    public function edit(){
-
+    public function edit($id){
+        $article = Article::find($id);
+        return view('articles.edit',compact('article'));
     }
 
     /*
@@ -95,7 +96,12 @@ class ArticleController extends Controller
         * Last Edit : 07/22/2020 Nipitphon
     */
     public function update(){
-
+        $article = new Article();
+        $article->title = request('title');
+        $article->body = request('body');
+        $article->excerpt = request('excerpt');
+        $article->save();
+        return redirect('/articles');
     }
 
     /*

@@ -39,17 +39,18 @@
             <div class="inner">
                 <div class="content">
                     
-                    <form method="POST" action="/articles">
+                    <form method="POST" action="/articles/{{ $article->id }}">
                         @csrf
+                        @method('PUT')
                         <div class="row gtr-uniform">
                             <div class="col-12 col-12-xsmall">
-                                <input type="text" name="title" id="title" value="" placeholder="Title Name" />
+                                <input type="text" name="title" id="title" value="{{ $article->title }}" placeholder="Title Name" />
                             </div>
                             <div class="col-12 col-12-xsmall">
-                                <textarea name="excerpt" id="excerpt" value="" placeholder="Excerpt" rows="3"></textarea>
+                                <textarea name="excerpt" id="excerpt" value="" placeholder="Excerpt" rows="3">{{ $article->excerpt }}</textarea>
                             </div>
                             <div class="col-12 col-12-xsmall">
-                                <textarea name="body" id="body" value="" placeholder="Body" rows="6"></textarea>
+                                <textarea name="body" id="body" value="" placeholder="Body" rows="6">{{ $article->body }}</textarea>
                             </div>
                             
                             <div class="col-12">

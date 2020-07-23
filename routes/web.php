@@ -162,8 +162,17 @@ Route::get('/articles/{article}','ArticleController@show');
 /*
     * get('/article/{artivle}/edit','ArticleController@edit') 
     * route to function edit in Article Controller
-    * Create : 07/22/2020
+    * Create : 07/23/2020
     * Author : Niphitphon
-    * Last Edit : 07/22/2020 Nipitphon
+    * Last Edit : 07/23/2020 Nipitphon
 */
 Route::get('/articles/{article}/edit','ArticleController@edit');
+
+/*
+    * put('/article/{artivle}','ArticleController@update') 
+    * route to function update in Article Controller
+    * Create : 07/23/2020
+    * Author : Niphitphon
+    * Last Edit : 07/23/2020 Nipitphon
+*/
+Route::put('/articles/{article}','ArticleController@update');
