@@ -124,7 +124,7 @@
 									<div class="image">
 										<img src="images/pic0{{ $loop->index + 1 }}.jpg" alt="" />
 									</div>
-									<p class="credit">- <a href="/article/{{ $article->id }}"><strong>{{ $article->title }}</strong></a> <span>CEO - ABC Inc.</span></p>
+									<p class="credit">- <a href="/articles/{{ $article->id }}"><strong>{{ $article->title }}</strong></a> <span>CEO - ABC Inc.</span></p>
 								</div>
 							</div>
 						</section>
