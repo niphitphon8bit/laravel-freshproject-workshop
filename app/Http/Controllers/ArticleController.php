@@ -14,31 +14,26 @@ class ArticleController extends Controller
         * input : -
         * output : list of article to article.view file
         * Create : 07/22/2020
-        * Author : Niphitphon
-        * Last Edit : 07/22/2020 Nipitphon
+        * Author : Niphitphon Thanatkulkit
+        * Last Edit : 07/23/2020 Nipitphon
     */
     public function index(){
         $articles = Article::latest()->get();
-        return view('articles.index',[
-            'articles' => $articles
-        ]);
+        return view('articles.index',['articles' => $articles]);
     }
 
     /*
-        * show($id) 
+        * show() 
         * show a single article
-        * input : id
+        * input : article object
         * output : article from database by id
         * Create : 07/22/2020
-        * Author : Niphitphon
-        * Last Edit : 07/22/2020 Nipitphon
+        * Author : Niphitphon Thanatkulkit
+        * Last Edit : 07/23/2020 Nipitphon
     */
-    public function show($id){
+    public function show(Article $article){
         
-        $article = Article::find($id);
-        return view('articles.show',[
-            'article' => $article
-            ]);
+        return view('articles.show',['article' => $article]);
     }
 
     /*
@@ -47,21 +42,21 @@ class ArticleController extends Controller
         * input : -
         * output : create new article page
         * Create : 07/22/2020
-        * Author : Niphitphon
-        * Last Edit : 07/22/2020 Nipitphon
+        * Author : Niphitphon Thanatkulkit
+        * Last Edit : 07/23/2020 Nipitphon
     */
-    public function create(Request $request){
+    public function create(){
         return view('articles.create');
     }
 
     /*
         * store() 
         * persist the new article
-        * input : -
-        * output : -
+        * input : title body excerpt from create page
+        * output : insert into database
         * Create : 07/22/2020
-        * Author : Niphitphon
-        * Last Edit : 07/22/2020 Nipitphon
+        * Author : Niphitphon Thanatkulkit
+        * Last Edit : 07/23/2020 Nipitphon
     */
     public function store(){
         $article = new Article();
@@ -75,28 +70,26 @@ class ArticleController extends Controller
     /*
         * edit()
         * show a view to edit an existing article
-        * input : -
-        * output : -
+        * input : Article object 
+        * output : get edit page
         * Create : 07/22/2020
-        * Author : Niphitphon
-        * Last Edit : 07/22/2020 Nipitphon
+        * Author : Niphitphon Thanatkulkit
+        * Last Edit : 07/23/2020 Nipitphon
     */
-    public function edit($id){
-        $article = Article::find($id);
+    public function edit(Article $article){
         return view('articles.edit',compact('article'));
     }
 
     /*
         * update()
         * presist the edited article 
-        * input : -
-        * output : -
+        * input : Article object
+        * output : update article to database
         * Create : 07/22/2020
-        * Author : Niphitphon
-        * Last Edit : 07/22/2020 Nipitphon
+        * Author : Niphitphon Thanatkulkit
+        * Last Edit : 07/23/2020 Nipitphon
     */
-    public function update(){
-        $article = new Article();
+    public function update(Article $article){
         $article->title = request('title');
         $article->body = request('body');
         $article->excerpt = request('excerpt');
