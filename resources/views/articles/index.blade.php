@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic Page - Industrious by TEMPLATED</title>
+		<title>Article - Industrious by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -45,7 +45,7 @@
                 <div class="content">
                     @foreach ($articles as $article)
                     <header>
-                            <a href="/article/{{ $article->id }}"><h2>{{ $article->title }}</h2></a>
+                            <a href="/articles/{{ $article->id }}"><h2>{{ $article->title }}</h2></a>
 						</header>
                         <p>{{ $article->excerpt }}</p>
                         <hr>
