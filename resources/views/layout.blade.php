@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+        @yield('header')
         @yield('content')
 	</body>
 </html>
