@@ -128,7 +128,7 @@ Route::get('/element', function () {
     * Author : Niphitphon
     * Last Edit : 07/22/2020 Nipitphon
 */
-Route::get('/articles/','ArticleController@index');
+Route::get('/articles','ArticleController@index');
 
 /*
     * post('/article/','ArticleController@store') 
@@ -137,7 +137,7 @@ Route::get('/articles/','ArticleController@index');
     * Author : Niphitphon
     * Last Edit : 07/22/2020 Nipitphon
 */
-Route::post('/articles/','ArticleController@store');
+Route::post('/articles','ArticleController@store');
 
 
 /*
@@ -147,7 +147,7 @@ Route::post('/articles/','ArticleController@store');
     * Author : Niphitphon
     * Last Edit : 07/22/2020 Nipitphon
 */
-Route::get('/article/create','ArticleController@create');
+Route::get('/articles/create','ArticleController@create');
 
 
 /*
@@ -157,4 +157,13 @@ Route::get('/article/create','ArticleController@create');
     * Author : Niphitphon
     * Last Edit : 07/22/2020 Nipitphon
 */
-Route::get('/article/{article}','ArticleController@show');
+Route::get('/articles/{article}','ArticleController@show');
+
+/*
+    * get('/article/{artivle}/edit','ArticleController@edit') 
+    * route to function edit in Article Controller
+    * Create : 07/22/2020
+    * Author : Niphitphon
+    * Last Edit : 07/22/2020 Nipitphon
+*/
+Route::get('/articles/{article}/edit','ArticleController@edit');
