@@ -18,7 +18,7 @@ class ArticleController extends Controller
         * Last Edit : 07/23/2020 Nipitphon
     */
     public function index(){
-        $articles = Article::latest()->get();
+        $articles = Article::latest('created_at')->paginate(5);
         return view('articles.index',['articles' => $articles]);
     }
 
@@ -59,6 +59,13 @@ class ArticleController extends Controller
         * Last Edit : 07/23/2020 Nipitphon
     */
     public function store(){
+
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+        ]);
+
         $article = new Article();
         $article->title = request('title');
         $article->body = request('body');
@@ -90,6 +97,13 @@ class ArticleController extends Controller
         * Last Edit : 07/23/2020 Nipitphon
     */
     public function update(Article $article){
+
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+        ]);
+
         $article->title = request('title');
         $article->body = request('body');
         $article->excerpt = request('excerpt');
